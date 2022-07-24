@@ -5,6 +5,7 @@ body {
 }
 
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -34,18 +35,60 @@ body {
   margin-bottom: 20px;
 }
 
-
+.add-btn,
 .btn {
   background: #000;
   color: #fff;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   font-size: 16px;
   font-family: inherit;
+}
+
+.add-form {
+  margin-bottom: 40px;
+}
+
+
+.form-control {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-control input {
+  height: 40px;
+  width: 100%;
+  padding: 3px 7px;
+  font-size: 17px;
+  border: 3px solid #000;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check input {
+  height: 20px;
+  width: 20px;
+}
+
+.form-control-check label {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.add-btn {
+  width: 100%;
 }
 
 .box {

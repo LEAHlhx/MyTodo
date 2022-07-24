@@ -9,16 +9,6 @@ function App() {
     //当前所在盒子
     const [currentBox, setCurrentBox] = useState(0)
     const [todos, setTodos] = useState([])
-    //根据输入框内容改变todos内容
-    const handleInput = (e) => {
-        if (e.code === 'Enter' && e.target.value !== '') {
-            todos.push({ content: e.target.value, type: currentBox })
-            setsave();
-            e.target.value = ''
-        } else if (e.code === 'Enter' && e.target.value === '') {
-            alert("Please enter the content!");
-        }
-    }
     //更改盒子的状态
     function changItems() {
         items[0].count = todos.length
@@ -65,9 +55,9 @@ function App() {
 
     return (
         <div className="todo-list">
-            <Header />
+            <Header todos={todos} setsave={setsave} currentBox={currentBox} />
             <Checkbox currentBox={currentBox} changeCurrentBox={setCurrentBox} items={items} />
-            <input type="text" onKeyPress={(e) => handleInput(e)} placeholder="Add Todo" />
+            {/* <input type="text" onKeyPress={(e) => handleInput(e)} placeholder="Add Todo" /> */}
             <Todos todos={todos} currentBox={currentBox} changeTodos={changeTodos} setsave={setsave} />
         </div>
     )
