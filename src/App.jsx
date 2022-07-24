@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Header } from './components/header'
 import { Checkbox } from './components/checkbox'
 import { Todos } from './components/todos'
 
@@ -64,7 +65,7 @@ function App() {
 
     return (
         <div className="todo-list">
-            <h1>TODO LIST</h1>
+            <Header />
             <Checkbox currentBox={currentBox} changeCurrentBox={setCurrentBox} items={items} />
             <input type="text" onKeyPress={(e) => handleInput(e)} placeholder="Add Todo" />
             <Todos todos={todos} currentBox={currentBox} changeTodos={changeTodos} setsave={setsave} />
