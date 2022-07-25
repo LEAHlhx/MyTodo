@@ -57,7 +57,6 @@ function App() {
         <div className="todo-list">
             <Header todos={todos} setsave={setsave} currentBox={currentBox} />
             <Checkbox currentBox={currentBox} changeCurrentBox={setCurrentBox} items={items} />
-            {/* <input type="text" onKeyPress={(e) => handleInput(e)} placeholder="Add Todo" /> */}
             <Todos todos={todos} currentBox={currentBox} changeTodos={changeTodos} setsave={setsave} />
         </div>
     )

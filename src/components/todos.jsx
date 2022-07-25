@@ -14,7 +14,7 @@ export function Todos(props) {
         <ul>
             <Drag render={props.todos.map((todo, index) => (props.currentBox === todo.type || props.currentBox === 0 || (props.currentBox === 2 && todo.type !== 1)) && <li className={`content ${todo.type === 1 ? 'done' : ""}`} key={index}>
                 <span className="doneBtn" onClick={() => handleDoneBtnClick(index)} >{"✅"}</span>
-                <span className="innerContent">{todo.content}</span>
+                <div className="innerContent"><h3>{todo.content}</h3><div className="innerTime">{todo.time}</div></div>
                 <span className="delBtn" onClick={() => handleDelBtnClick(index)} >{"❌"}</span>
             </li>)} setItems={props.setsave} items={props.todos}>
             </Drag>
